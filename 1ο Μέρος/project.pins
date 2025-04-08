@@ -1,0 +1,226 @@
+; Mon Dec 12 20:59:20 EST 2022
+; 
+;+ (version "3.5")
+;+ (build "Build 663")
+
+([project_Class17] of  mid
+
+	(sensor_input_from [project_Class60])
+	(SensorName "m3")
+	(value 26))
+
+([project_Class24] of  mid
+
+	(sensor_input_from [project_Class57])
+	(SensorName "m1")
+	(value 10))
+
+([project_Class25] of  mid
+
+	(sensor_input_from [project_Class59])
+	(SensorName "m2")
+	(value 24))
+
+([project_Class26] of  output
+
+	(sensor_input_from [project_Class58])
+	(SensorName "out")
+	(value 18))
+
+([project_Class29] of  input
+
+	(sensor_input_from [project_Class33])
+	(SensorName "in1")
+	(value 21))
+
+([project_Class30] of  input
+
+	(sensor_input_from [project_Class33])
+	(SensorName "in2")
+	(value 28))
+
+([project_Class31] of  input
+
+	(sensor_input_from [project_Class33])
+	(SensorName "in3")
+	(value 10))
+
+([project_Class32] of  input
+
+	(sensor_input_from [project_Class33])
+	(SensorName "in4")
+	(value 25))
+
+([project_Class33] of  cycle
+
+	(cycle_id 1)
+	(input1 21)
+	(input2 28)
+	(input3 10)
+	(input4 25)
+	(input_from [project_Class58])
+	(mid1 10)
+	(mid2 24)
+	(mid3 26)
+	(ouput 18)
+	(output_sensor
+		[project_Class29]
+		[project_Class30]
+		[project_Class31]
+		[project_Class32])
+	(output_to
+		[project_Class57]
+		[project_Class59]
+		[project_Class60]))
+
+([project_Class34] of  cycle
+
+	(cycle_id 2)
+	(input1 7)
+	(input2 25)
+	(input3 13)
+	(input4 15)
+	(mid1 0)
+	(mid2 0)
+	(mid3 3)
+	(ouput 3))
+
+([project_Class35] of  cycle
+
+	(cycle_id 3)
+	(input1 11)
+	(input2 17)
+	(input3 24)
+	(input4 31)
+	(mid1 22)
+	(mid2 6)
+	(mid3 8)
+	(ouput 14))
+
+([project_Class36] of  cycle
+
+	(cycle_id 4)
+	(input1 18)
+	(input2 11)
+	(input3 28)
+	(input4 21)
+	(mid1 4)
+	(mid2 12)
+	(mid3 12)
+	(ouput 0))
+
+([project_Class37] of  cycle
+
+	(cycle_id 5)
+	(input1 25)
+	(input2 24)
+	(input3 30)
+	(input4 10)
+	(mid1 18)
+	(mid2 16)
+	(mid3 12)
+	(ouput 12))
+
+([project_Class38] of  cycle
+
+	(cycle_id 6)
+	(input1 12)
+	(input2 19)
+	(input3 11)
+	(input4 19)
+	(mid1 8)
+	(mid2 24)
+	(mid3 17)
+	(ouput 9))
+
+([project_Class39] of  cycle
+
+	(cycle_id 7)
+	(input1 1)
+	(input2 31)
+	(input3 7)
+	(input4 22)
+	(mid1 2)
+	(mid2 0)
+	(mid3 26)
+	(ouput 26))
+
+([project_Class40] of  cycle
+
+	(cycle_id 8)
+	(input1 0)
+	(input2 31)
+	(input3 3)
+	(input4 23)
+	(mid1 0)
+	(mid2 0)
+	(mid3 0)
+	(ouput 0))
+
+([project_Class41] of  cycle
+
+	(cycle_id 9)
+	(input1 31)
+	(input2 1)
+	(input3 6)
+	(input4 8)
+	(mid1 30)
+	(mid2 30)
+	(mid3 0)
+	(ouput 30))
+
+([project_Class42] of  cycle
+
+	(cycle_id 10)
+	(input1 6)
+	(input2 4)
+	(input3 25)
+	(input4 12)
+	(mid1 12)
+	(mid2 31)
+	(mid3 12)
+	(ouput 28))
+
+([project_Class57] of  add
+
+	(CircuitName "a1")
+	(in1 21)
+	(in2 21)
+	(input_from [project_Class33])
+	(out 10)
+	(output_sensor [project_Class24])
+	(output_to [project_Class59]))
+
+([project_Class58] of  add
+
+	(CircuitName "a2")
+	(in1 24)
+	(in2 26)
+	(input_from
+		[project_Class59]
+		[project_Class60])
+	(out 18)
+	(output_sensor [project_Class26])
+	(output_to [project_Class33]))
+
+([project_Class59] of  multiply
+
+	(CircuitName "p1")
+	(in1 28)
+	(in2 10)
+	(input_from
+		[project_Class57]
+		[project_Class33])
+	(out 24)
+	(output_sensor [project_Class25])
+	(output_to [project_Class58]))
+
+([project_Class60] of  multiply
+
+	(CircuitName "p2")
+	(in1 10)
+	(in2 25)
+	(input_from [project_Class33])
+	(out 26)
+	(output_sensor [project_Class17])
+	(output_to [project_Class58]))
